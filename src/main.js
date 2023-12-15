@@ -11,7 +11,7 @@ import App from './App.vue'
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/', name: 'Home', component: TheWelcome },
+        { path: '/', name: 'Home', component: TheWelcome},
         { path: '/about', name: 'About', component: AboutPage },
         { path: '/gallery', name: 'Gallery', component: GalleryPage },
     ]
