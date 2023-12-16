@@ -1,25 +1,20 @@
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-    <div class="wrapper">
-
-    </div>
-  </header>
-
-  <!--  <main>-->
-  <!--    <TheWelcome />-->
-  <!--  </main>-->
+  <Header></Header>
 
   <router-view></router-view>
 </template>
 
 
 <script setup>
-
+import Header from "@/components/Header.vue";
 </script>
 
 
 <style scoped>
+* {
+  outline: solid red 1px;
+}
+
 header {
   line-height: 1.5;
 }
