@@ -9,6 +9,7 @@
   --vt-c-black-mute: #19191C;
 
   --vt-c-blue: #52B5B5;
+  --vt-c-darkBlue: #2F7A84;
 
   --vt-c-divider-light-1: #C9C9C9;
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
@@ -30,9 +31,6 @@
   --color-border: var(--vt-c-divider-light-2);
   --color-border-hover: var(--vt-c-divider-light-1);
 
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
   --section-gap: 160px;
 }
 
@@ -43,10 +41,12 @@
   box-sizing: border-box;
   margin: 0;
   font-weight: normal;
+  transition: all 0.3s;
+
 }
 
 body {
-  min-height: 100vh;
+  min-height: 120vh;
   color: var(--vt-c-darkText);
   background: var(--color-background-mute);
   transition:
