@@ -128,7 +128,7 @@ function show(name) {
     .hamburger {
       width: 35px;
       position: absolute;
-      right: 20px;
+      right: 12px;
       top: 12px;
       padding: 5px;
       box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;
