@@ -146,7 +146,7 @@ function show(name) {
 
     .mobile-menu {
       position: absolute;
-      top: 61px;
+      top: 60px;
       width: 100%;
       flex-direction: column;
       padding: 20px;
