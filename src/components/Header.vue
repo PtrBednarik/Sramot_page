@@ -1,5 +1,4 @@
-<template>
-  
+<template>  
   <header>
     <nav>
       <h1>Nebeský šramot</h1>
@@ -31,7 +30,6 @@
 
 <script setup>
 
-
 function show(name) {
   let x = document.getElementById(name);
   x.style.right = ((x.style.right !== '-100%') ? '-100%' : '0');
@@ -50,14 +48,9 @@ function show(name) {
 
 }
 
-
-
-
 </script>
 
 <style scoped>
-
-
   header {
     position: fixed;
     top: 0;
@@ -169,3 +162,5 @@ function show(name) {
     }
   }
 </style>
+
+
