@@ -5,11 +5,14 @@
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+
+
 }
 
 a {
   text-decoration: none;
   color: var(--vt-c-darkBlue);
+  transition: all 0.3s !important;
 }
 
 .button {
