@@ -1,6 +1,6 @@
 import './assets/main.css'
 
-import AboutPage from "@/pages/AboutPage.vue";
+import AboutPage from "pages/AboutPage.vue"
 import GalleryPage from "@/pages/GalleryPage.vue";
 import HomePage from "@/pages/HomePage.vue";
 
