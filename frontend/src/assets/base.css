@@ -41,19 +41,14 @@
   box-sizing: border-box;
   margin: 0;
   font-weight: normal;
-  transition: all 0.3s;
-
 }
 
 body {
   min-height: 120vh;
   color: var(--vt-c-darkText);
   background: var(--color-background-mute);
-  transition:
-    color 0.5s,
-    background-color 0.5s;
   line-height: 1.6;
-  font-family: 'Thasadith', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 18px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

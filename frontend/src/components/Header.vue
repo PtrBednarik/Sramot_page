@@ -1,7 +1,9 @@
 <template>  
   <header>
     <nav>
-      <h1>Nebeský šramot</h1>
+      <a class="logo-title" href="/">
+        <h1>Nebeský šramot</h1>
+      </a>
       <ul class="desktop-menu">
         <li><a href="/">Domov</a></li>
         <li><a href="/about">O nás</a></li>
@@ -13,7 +15,7 @@
       <div id="dropdown" class="drop-down">
 
         <a @click="show('mobile-menu')" class="mobile-hamburger" href="javascript: void(0)">
-          <img class="hamburger" src="/hamburger.png" alt="">
+          <img style="background-color: transparent" id="hamburger" class="hamburger" src="/hamburger.png" alt="">
         </a>
           <ul id="mobile-menu" class="mobile-menu" style="right: -100%;">
             <li><a href="/">Domov</a></li>
@@ -32,18 +34,25 @@
 
 function show(name) {
   let x = document.getElementById(name);
+  let hamburger = document.getElementById("hamburger")
+
   x.style.right = ((x.style.right !== '-100%') ? '-100%' : '0');
+  hamburger.style.backgroundColor = ((hamburger.style.backgroundColor !== 'transparent') ? 'transparent' : 'rgba(0, 0, 0, 0.05)');
+
 
   document.addEventListener("click", (evt) => {
     let flyoutEl = document.getElementById("dropdown");
     let targetEl = evt.target; // clicked element
     do {
-      if(targetEl === flyoutEl) {
+      if (targetEl === flyoutEl) {
         return;
       }
       targetEl = targetEl.parentNode;
     } while (targetEl);
     x.style.right = "-100%";
+    hamburger.style.backgroundColor = 'transparent';
+
+
   });
 
 }
@@ -77,7 +86,7 @@ function show(name) {
 
   a {
     color: var(--vt-c-text-dark-1);
-    margin-right: 25px;
+    margin-right: 23px;
     text-transform: uppercase;
     font-size: 15px;
   }
@@ -89,8 +98,8 @@ function show(name) {
   .songs {
     background-color: var(--vt-c-blue);
     padding: 8px 25px;
-    border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+    margin-right: 15px;
 
   }
 
@@ -104,8 +113,10 @@ function show(name) {
   }
 
   h1 {
-    margin-left: 30px;
+    margin-left: 25px;
+    text-transform: uppercase;
   }
+
 
  .mobile-hamburger, .drop-down {
     display: none;
@@ -129,7 +140,13 @@ function show(name) {
       cursor: pointer;
       z-index: 888;
     }
-    h1 {
+
+    .hamburger:hover {
+      background-color: rgba(0, 0, 0, 0.08);
+
+    }
+
+    .logo-title {
       margin: 0 auto;
     }
 
@@ -139,13 +156,14 @@ function show(name) {
 
     .mobile-menu {
       position: absolute;
-      top: 61px;
+      top: 60px;
       width: 100%;
       flex-direction: column;
       padding: 20px;
       background-color: var(--color-background-mute);
       box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;
       z-index: 500;
+      transition: 0.3s;
     }
 
     .mobile-menu a {
