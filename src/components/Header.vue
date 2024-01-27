@@ -1,10 +1,11 @@
 <template>  
   <header>
     <nav>
-      <a href="/">
+      <a class="logo-title" href="/">
         <h1>Nebeský šramot</h1>
       </a>
       <ul class="desktop-menu">
+        <li><a href="/">Domov</a></li>
         <li><a href="/about">O nás</a></li>
         <li><a href="/gallery">Galéria</a></li>
         <li><a href="#">História</a></li>
@@ -116,6 +117,7 @@ function show(name) {
     text-transform: uppercase;
   }
 
+
  .mobile-hamburger, .drop-down {
     display: none;
   }
@@ -144,7 +146,7 @@ function show(name) {
 
     }
 
-    h1 {
+    .logo-title {
       margin: 0 auto;
     }
 

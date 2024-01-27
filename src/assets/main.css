@@ -1,10 +1,14 @@
 @import './base.css';
 
+* {
+  //outline: solid red 1px;
+}
 
 #app {
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+
 
 
 }

@@ -1,9 +1,7 @@
 <template>
-  <div>
       <img :src="this.source"
            :alt="this.alt"
       class="photo">
-  </div>
 </template>
 
 <script>
@@ -28,10 +26,8 @@ export default {
 <style scoped>
   .photo {
     width: 100%;
-    border-radius: 25px;
-    /*height: 30%;*/
+    height: 100%;
+    object-fit: cover;
   }
-  .photo:hover {
 
-  }
 </style>
