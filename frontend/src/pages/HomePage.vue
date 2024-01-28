@@ -27,10 +27,11 @@
             Nam maximus turpis et velit venenatis tempus.
           </p>
           <div class="about-button">
-          <Button></Button>
+          <Button title="Viac"></Button>
           </div>
         </div>
       </div>
+      <img class="piano-image" src="../../src/assets/images/piano.JPG" alt="">
     </div>
   </section>
 </template>
@@ -81,7 +82,7 @@ export default {
 
   svg {
     position: absolute;
-    bottom: -1px;
+    bottom: -1px !important;
     z-index: 0;
     width: 100%;
   }
@@ -97,26 +98,35 @@ export default {
   .about-container h1 {
     text-align: center;
     font-size: 48px;
-    padding-bottom: 2rem;
+    padding-bottom: 5rem;
   }
 
   .flex-container {
     display: flex;
+    padding-bottom: 5em;
   }
 
   .white-box {
     background-color: var(--color-background-white-opacity);
     color: var(--vt-c-text-dark-1);
     width: 50%;
-    padding: 5rem 5rem 0 5rem;
+    padding: 4.5rem 4.5rem 0 4.5rem;
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
   }
 
   .about-button {
     display: flex;
     justify-content: right;
+  }
+
+  .piano-image {
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
   }
 
 

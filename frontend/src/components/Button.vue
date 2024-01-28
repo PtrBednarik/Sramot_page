@@ -81,7 +81,6 @@ export default {
   }
 
   a:hover:before {
-    background-color: var(--vt-c-button-background);
     border-radius: 0;
     border: solid 1px var(--vt-c-button-outline);
   }
