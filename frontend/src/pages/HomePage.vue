@@ -6,8 +6,8 @@
       <h3>Nebeský šramot</h3>
       </div>
       <div class="buttons-container">
-        <Button></Button>
-        <Button></Button>
+        <Button title="Test1"></Button>
+        <Button title="Test2"></Button>
         <Button></Button>
       </div>
     </div>

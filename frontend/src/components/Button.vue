@@ -1,12 +1,35 @@
 
 <template>
   <div class="button-container">
-      <a href="#">Test</a>
+    <a href="#">{{ this.title }}</a>
+<!--    <a href="#">{{ title }}</a>-->
   </div>
 </template>
 
-<script setup>
+<script>
+// Stary sposob -------------------------------
+export default {
+  name: "Button",
+  props: {
+    title: {
+      type: String,
+      default: "Testik"
+    }
+  }
+}
 
+// import { ref } from 'vue'
+//   export default {
+//     setup() {
+//       //Props :
+//       const title = ref("Titulko")
+//
+//       return {
+//         title
+//       }
+//
+//     }
+//   }
 
 </script>
 
