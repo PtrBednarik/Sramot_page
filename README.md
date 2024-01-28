@@ -1,3 +1,12 @@
+# Sramot_page
 Starting commands : 
-Backend : npm run start
-Frontend : npm run dev
+
+# Backend
+```sh
+npm run start
+```
+
+# Frontend
+```sh
+npm run dev
+```
