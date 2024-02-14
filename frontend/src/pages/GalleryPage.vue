@@ -39,14 +39,14 @@ export default {
   setup() {
 
     const photos = [
-      "src/assets/images/test1.jpg",
-      "src/assets/images/test2.jpg",
-      "src/assets/images/test3.jpg",
-      "src/assets/images/test4.jpg",
-      "src/assets/images/test5.jpg",
-      "src/assets/images/test6.jpg",
-      "src/assets/images/test7.jpg",
-      "src/assets/images/test8.jpg",
+      "src/assets/gallery/test1.jpg",
+      "src/assets/gallery/test2.jpg",
+      "src/assets/gallery/test3.jpg",
+      "src/assets/gallery/test4.jpg",
+      "src/assets/gallery/test5.jpg",
+      "src/assets/gallery/test6.jpg",
+      "src/assets/gallery/test7.jpg",
+      "src/assets/gallery/test8.jpg",
     ]
 
     return {
