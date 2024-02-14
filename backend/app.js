@@ -32,7 +32,10 @@ app.get("/", (res, req) => {
 })
 
 const TodosRoute = require('./routes/Todos');
-app.use('/todos', TodosRoute)
+app.use('/todos', TodosRoute);
+
+const PhotosRoute = require('./routes/Photos');
+app.use('/photos', PhotosRoute)
 
 //start the server
 app.listen(3000, () => {

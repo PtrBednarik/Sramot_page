@@ -5,15 +5,8 @@ exports.getAllTodos = async (req, res) => {
         res.json(todos)
 };
 exports.getTodoByID = async (req, res) => {
-    const newTodo = new Todo(
-        // req.body     //what is Vue App sending to DB
-        {
-            author: "Jozko Vajda",
-            todo: "S radostou baby!"
-        }
-    );
-    const savedTodo = await newTodo.save()
-    res.json(savedTodo)
+    const t = await Todo.findById({_id : req.params.id })
+    res.json(t)
 };
 exports.createTodo = async (req, res) => {
     const newTodo = new Todo(

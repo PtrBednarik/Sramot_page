@@ -1,4 +1,4 @@
-<template>  
+<template>
   <header>
     <nav>
       <a class="logo-title" href="/">
@@ -33,14 +33,12 @@
 
 <script setup>
 
-
 function show(name) {
   let x = document.getElementById(name);
   let hamburger = document.getElementById("hamburger")
 
   x.style.right = ((x.style.right !== '-100%') ? '-100%' : '0');
   hamburger.style.backgroundColor = ((hamburger.style.backgroundColor !== 'rgba(0, 0, 0, 0.05)') ? 'rgba(0, 0, 0, 0.05)' : 'rgba(184, 184, 184, 0.26)');
-
 
   document.addEventListener("click", (evt) => {
     let flyoutEl = document.getElementById("dropdown");
@@ -53,10 +51,7 @@ function show(name) {
     } while (targetEl);
     x.style.right = "-100%";
     hamburger.style.backgroundColor = 'rgba(184, 184, 184, 0.26)';
-
-
   });
-
 }
 
 </script>
@@ -129,7 +124,7 @@ function show(name) {
   }
 
   /* MOBILE MENU --------------- */
-  
+
   @media only screen and (max-width: 840px) {
     .mobile-hamburger, .drop-down {
       display: block;
