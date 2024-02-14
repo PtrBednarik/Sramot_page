@@ -1,20 +1,13 @@
 import './assets/main.css'
 
-import AboutPage from "@/pages/AboutPage.vue"
-import GalleryPage from "@/pages/GalleryPage.vue";
-import HomePage from "@/pages/HomePage.vue";
-
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
+import routes from "@/router/routes.js";
 
 const router = createRouter({
     history: createWebHistory(),
-    routes: [
-        { path: '/', name: 'Home', component: HomePage},
-        { path: '/about', name: 'About', component: AboutPage },
-        { path: '/gallery', name: 'Gallery', component: GalleryPage },
-    ]
+    routes
 });
 
 createApp(App)

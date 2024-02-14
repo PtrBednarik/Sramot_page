@@ -1,48 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const Todo = require('../models/Todos')
 
-//Get all todos routes
-router.get('/', async (req, res) => {
-    const todos = await Todo.find();
-    res.json(todos)
-})
+const {
+    getAllTodos,
+    getTodoByID,
+    createTodo,
+    deleteTodo,
+    updateTodo
+} = require("../controllers/TodoController");
 
-//Get Todo by ID
-router.get('/get/:id', async (req, res) => {
-    const t = await Todo.findById({_id : req.params.id })
-    res.json(t)
-})
+router.get('/getAll', getAllTodos);
+router.get('/get/:id', getTodoByID);
 
-//Create a new Todo
-router.post('/new', async (req, res) => {
-    const newTodo = new Todo(
-        // req.body     //what is Vue App sending to DB
-        {
-            author: "Jozko Vajda",
-            todo: "S radostou baby!"
-        }
-    );
-    const savedTodo = await newTodo.save()
-    res.json(savedTodo)
-})
+router.post('/new', createTodo);
 
-//Delete Todo by ID
-router.delete('/delete/:id', async (req, res) => {
-    const tDelete = await Todo.findByIdAndDelete({_id : req.params.id })
-    res.json(tDelete)
-})
+router.put('/update/:id', updateTodo);
 
-//Update Todo by ID
-router.put('/update/:id', async (req, res) => {
-    const tUpdate = await Todo.updateOne(
-        // {_id : req.params.id }, { $set: req.body }
-        {
-            author: "Stary Jano",
-            todo: "Kto sa vcera posral?"
-        }
-    )
-    res.json(tUpdate)
-})
+router.delete('/delete/:id', deleteTodo);
 
 module.exports = router
