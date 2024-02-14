@@ -6,9 +6,9 @@
       <h3>Nebeský šramot</h3>
       </div>
       <div class="buttons-container">
-        <Button title="Test1"></Button>
-        <Button title="Test2"></Button>
-        <Button></Button>
+        <Button title="Piesne"></Button>
+        <Button title="Galéria"></Button>
+        <Button title="Kontakt"></Button>
       </div>
     </div>
   </section>
@@ -27,20 +27,34 @@
             Nam maximus turpis et velit venenatis tempus.
           </p>
           <div class="about-button">
-          <Button title="Viac"></Button>
+          <Button action="/about" title="Viac"></Button>
           </div>
         </div>
       </div>
       <img class="piano-image" src="../../src/assets/images/piano.JPG" alt="">
     </div>
   </section>
+  <section class="question-container">
+    <qna-table question="Ja som jaro" answer=
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Pellentesque dictum, quam nec facilisis molestie, odio justo
+          lobortis est, sed fringilla mi purus id nisl. Suspendisse nec
+           varius lacus. Aliquam at varius quam. Integer dapibus massa sem,
+            quis tempus nisl semper ultrices. Proin vitae felis vitae quam
+            faucibus rhoncus."
+    ></qna-table>
+  </section>
 </template>
 
 <script>
 import Button from "@/components/Button.vue";
+import QnaTable from "@/components/QnaTable.vue";
 export default {
   name: "HomePage",
-  components: {Button}
+  components: {
+    Button,
+    QnaTable
+  }
 }
 </script>
 
@@ -116,17 +130,39 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
   }
 
+  .white-box p {
+    max-width: 50em;
+  }
+
   .about-button {
     display: flex;
     justify-content: right;
   }
 
   .piano-image {
-    max-width: 600px;
+    max-width: 700px;
     height: auto;
     margin: 0 auto;
+    flex-wrap: wrap;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  }
+
+  @media only screen and (max-width: 1500px) {
+    .flex-container {
+      flex-direction: column;
+    }
+
+    .white-box {
+      margin: 30px auto;
+      border-radius: 25px;
+      width: 80%;
+    }
+
+    .piano-image {
+      max-width: 50%;
+    }
+
   }
 
 

@@ -1,8 +1,7 @@
 
 <template>
   <div class="button-container">
-    <a href="#">{{ this.title }}</a>
-<!--    <a href="#">{{ title }}</a>-->
+    <a v-bind:href="action">{{ this.title }}</a>
   </div>
 </template>
 
@@ -13,7 +12,14 @@ export default {
   props: {
     title: {
       type: String,
-      default: "Testik"
+      default: "Btn",
+      required: true
+    },
+
+    action: {
+      type: String,
+      default: "/",
+      required: true
     }
   }
 }
@@ -53,7 +59,7 @@ export default {
   a {
     border: solid 1px var(--vt-c-button-outline);
     background-color: var(--vt-c-button-background);
-    font-size: 28px;
+    font-size: 24px;
     font-family: "Anton", sans-serif !important;
     text-transform: uppercase;
     padding: 0.6rem 5rem;
@@ -66,8 +72,8 @@ export default {
     content: "";
     border: solid 1px var(--vt-button-before);
     width: 80%;
-    height: 80%;
-    top: 10%;
+    height: 70%;
+    top: 16.5%;
     left: 10%;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
