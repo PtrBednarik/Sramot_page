@@ -22,6 +22,7 @@
             <li><a href="/about">O nás</a></li>
             <li><a href="/gallery">Galéria</a></li>
             <li><a href="#">História</a></li>
+            <li><a href="#">Kontakt</a></li>
             <li><a class="songs" href="#">Piesne</a></li>
           </ul>
       </div>
@@ -153,11 +154,7 @@ function show(name) {
     }
 
     .logo-title {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: 0;
-      line-height: 1.1;
+      display: none;
     }
 
     .desktop-menu {
