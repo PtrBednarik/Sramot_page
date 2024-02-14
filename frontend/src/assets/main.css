@@ -6,7 +6,6 @@
 
 #app {
   margin: 0 auto;
-  padding: 2rem;
   font-weight: normal;
 
 
@@ -15,7 +14,8 @@
 
 a {
   text-decoration: none;
-  color: var(--vt-c-darkBlue);
+  color: var(--vt-c-white-soft);
+  font-family: "Atkinson Hyperlegible", sans-serif;
   transition: all 0.3s !important;
 }
 

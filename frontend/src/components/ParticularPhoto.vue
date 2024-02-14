@@ -17,7 +17,7 @@ export default {
       type: String
     }
   },
-  setup() {
+  setup(props) {
 
   }
 }
