@@ -5,11 +5,11 @@
         <h1>Nebeský šramot</h1>
       </a>
       <ul class="desktop-menu">
-        <li><a href="/">Domov</a></li>
-        <li><a href="/about">O nás</a></li>
-        <li><a href="/gallery">Galéria</a></li>
-        <li><a href="#">História</a></li>
-        <li><a class="songs" href="#">Piesne</a></li>
+        <li><router-link to="/">Domov</router-link></li>
+        <li><router-link to="/about">O nás</router-link></li>
+        <li><router-link to="/gallery">Galéria</router-link></li>
+        <li><router-link to="#">História</router-link></li>
+        <li><router-link to="#" class="songs">Piesne</router-link></li>
       </ul>
 
       <div id="dropdown" class="drop-down">
@@ -18,12 +18,12 @@
           <img style="background-color: rgba(184, 184, 184, 0.26)" id="hamburger" class="hamburger" src="/hamburger.png" alt="">
         </a>
           <ul id="mobile-menu" class="mobile-menu" style="right: -100%;">
-            <li><a href="/">Domov</a></li>
-            <li><a href="/about">O nás</a></li>
-            <li><a href="/gallery">Galéria</a></li>
-            <li><a href="#">História</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a class="songs" href="#">Piesne</a></li>
+            <li><router-link to="/">Domov</router-link></li>
+            <li><router-link to="/about">O nás</router-link></li>
+            <li><router-link to="/gallery">Galéria</router-link></li>
+            <li><router-link to="#">História</router-link></li>
+            <li><router-link to="#">Kontakt</router-link></li>
+            <li><router-link to="#" class="songs">Piesne</router-link></li>
           </ul>
       </div>
     </nav>

@@ -3,7 +3,6 @@
     <aside>
       <div class="aside-div">
         <h3>Roky</h3>
-
         <ul>
           <li><a href="#">2023</a></li>
           <li><a href="#">2022</a></li>
@@ -22,7 +21,7 @@
     <div class="gallery">
       <div class="gallery-side">
         <div class="gallery-item" v-for="photo in photos">
-          <ParticularPhoto :source="photo"></ParticularPhoto>
+          <ParticularPhoto :source="photoPreset + photo.year + '/' + photo.filepath"></ParticularPhoto>
         </div>
       </div>
     </div>
@@ -32,25 +31,30 @@
 
 <script>
 import ParticularPhoto from "@/components/ParticularPhoto.vue";
+import { ref, onMounted } from 'vue';
+import api from "@/api/api.js";
 
 export default {
   name: "Gallery",
   components: {ParticularPhoto},
   setup() {
+    async function getPhotosByYear(year) {
+      //TODO implement year selection
+      const response = await api.get("http://localhost:3000/photos/getByYear/2020");
 
-    const photos = [
-      "src/assets/gallery/test1.jpg",
-      "src/assets/gallery/test2.jpg",
-      "src/assets/gallery/test3.jpg",
-      "src/assets/gallery/test4.jpg",
-      "src/assets/gallery/test5.jpg",
-      "src/assets/gallery/test6.jpg",
-      "src/assets/gallery/test7.jpg",
-      "src/assets/gallery/test8.jpg",
-    ]
+      console.log('Get photos - ',response.data)
+      photos.value = response.data
+    }
+
+    onMounted(() => {
+      getPhotosByYear()
+    })
+    const photoPreset = "src/assets/gallery/"
+    const photos = ref([])
 
     return {
-      photos
+      photos, photoPreset,
+      getPhotosByYear
     }
   }
 }

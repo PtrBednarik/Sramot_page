@@ -16,12 +16,7 @@ exports.getPhotosByYear = async (req, res) => {
 };
 exports.createPhoto = async (req, res) => {
     const newPhoto = new Photo(
-        // req.body     //what is Vue App sending to DB
-        {
-            title: "Baby fotka",
-            filepath: "cesta-do-kelu",
-            year: "2000"
-        }
+        req.body
     );
     const savedPhoto = await newPhoto.save()
     res.json(savedPhoto)
