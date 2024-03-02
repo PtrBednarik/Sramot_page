@@ -7,7 +7,7 @@
       <ul class="desktop-menu">
         <li><router-link to="/">Domov</router-link></li>
         <li><router-link to="/about">O nás</router-link></li>
-        <li><router-link to="/gallery">Jožko Vajda</router-link></li>
+        <li><router-link to="/gallery">Galéria</router-link></li>
         <li><router-link to="#">História</router-link></li>
         <li><router-link to="#" class="songs">Piesne</router-link></li>
       </ul>
