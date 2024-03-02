@@ -65,7 +65,6 @@ function show(name) {
     background-color: transparent;
     z-index: 999;
   }
-
   nav {
     display: flex;
     justify-content: space-between;
@@ -73,7 +72,6 @@ function show(name) {
     height: inherit;
     z-index: 999;
   }
-
   ul {
     position: fixed;
     border-radius: 25px;
@@ -91,45 +89,35 @@ function show(name) {
     -webkit-backdrop-filter: blur(10px);
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   }
-
   a {
     color: var(--vt-c-text-light);
     margin-right: 2.3rem;
     text-transform: uppercase;
     font-size: 15px;
   }
-
   a:hover, a:active {
     color: var(--vt-c-text-dark-1);
   }
-
   li {
     list-style-type: none;
     display: flex;
     align-items: center;
   }
-
   h1 {
     margin-left: 25px;
     text-transform: uppercase;
   }
-
   .songs {
     margin: 0;
   }
-
-
  .mobile-hamburger, .drop-down {
     display: none;
   }
-
   /* MOBILE MENU --------------- */
-
   @media only screen and (max-width: 840px) {
     .mobile-hamburger, .drop-down {
       display: block;
     }
-
     .hamburger {
       width: 35px;
       background-color: var(--vt-c-white-mute);
@@ -142,20 +130,15 @@ function show(name) {
       cursor: pointer;
       z-index: 888;
     }
-
     .hamburger:hover {
       background-color: rgba(0, 0, 0, 0.08);
-
     }
-
     .logo-title {
       display: none;
     }
-
     .desktop-menu {
       display: none;
     }
-
     .mobile-menu {
       position: fixed;
       top: 0;
@@ -168,16 +151,13 @@ function show(name) {
       transition: 0.3s;
       border-radius: 0;
     }
-
     .mobile-menu a {
       padding: 5px;
       margin: 5px;
     }
-
     .mobile-menu li {
       padding: 5px;
     }
-
     .mobile-menu {
       padding: 8px 20px;
     }
